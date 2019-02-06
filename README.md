@@ -1,5 +1,5 @@
 # Om Assistant
-A plugin to assit Om theme in adding widgets.
+A plugin to assist Om theme in adding widgets.
 
 ### To use this follow the below steps
  1. Make sure you have [Om Theme](https://codestag.com/themes/om) installed and then clone or download this repo.
