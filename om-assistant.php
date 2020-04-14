@@ -81,6 +81,7 @@ if ( ! class_exists( 'Om_Assistant' ) ) :
 		 * @since 1.0
 		 */
 		public function includes() {
+			require_once OA_PLUGIN_PATH . 'includes/widgets/class-stag-widget.php';
 			require_once OA_PLUGIN_PATH . 'includes/widgets/recent-posts.php';
 			require_once OA_PLUGIN_PATH . 'includes/widgets/static-content.php';
 		}
