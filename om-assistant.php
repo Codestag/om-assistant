@@ -83,8 +83,6 @@ if ( ! class_exists( 'Om_Assistant' ) ) :
 		public function includes() {
 			require_once OA_PLUGIN_PATH . 'includes/widgets/recent-posts.php';
 			require_once OA_PLUGIN_PATH . 'includes/widgets/static-content.php';
-
-			require_once OA_PLUGIN_PATH . 'includes/updater/updater.php';
 		}
 	}
 endif;
