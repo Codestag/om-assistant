@@ -114,13 +114,16 @@ function om_assistant_activation_notice() {
  */
 function om_assistant_activation_check() {
 	$theme = wp_get_theme(); // gets the current theme
-	if ( 'Om' == $theme->name || 'Om' == $theme->parent_theme ) {
+	if ( 'Om' === $theme->name || 'Om' === $theme->parent_theme ) {
 		if ( function_exists( 'is_multisite' ) && is_multisite() ) {
 			add_action( 'after_setup_theme', 'om_assistant' );
 		} else {
 			om_assistant();
 		}
 	} else {
+		if ( ! function_exists( 'deactivate_plugins' ) ) {
+			require_once ABSPATH . 'wp-admin/includes/plugin.php';
+		}
 		deactivate_plugins( plugin_basename( __FILE__ ) );
 		add_action( 'admin_notices', 'om_assistant_activation_notice' );
 	}
