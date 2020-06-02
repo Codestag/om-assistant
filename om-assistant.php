@@ -60,9 +60,10 @@ if ( ! class_exists( 'Om_Assistant' ) ) :
 		}
 
 		/**
+		 * Method to define a constant.
 		 *
-		 * @param string $name
-		 * @param string $value
+		 * @param string $name name of constant.
+		 * @param string $value value of the constant.
 		 * @since 1.0
 		 */
 		private function define( $name, $value ) {
@@ -72,6 +73,7 @@ if ( ! class_exists( 'Om_Assistant' ) ) :
 		}
 
 		/**
+		 * Includes plugin files.
 		 *
 		 * @since 1.0
 		 */
@@ -85,6 +87,7 @@ endif;
 
 
 /**
+ * Invokes Om_Assistant Class.
  *
  * @since 1.0
  */
@@ -93,6 +96,7 @@ function om_assistant() {
 }
 
 /**
+ * Activation notice.
  *
  * @since 1.0
  */
