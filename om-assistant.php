@@ -21,39 +21,34 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if ( ! class_exists( 'Om_Assistant' ) ) :
 	/**
+	 * Om Assistant.
 	 *
 	 * @since 1.0
 	 */
 	class Om_Assistant {
 
 		/**
+		 * Class instance.
 		 *
 		 * @since 1.0
 		 */
 		private static $instance;
 
 		/**
+		 * Register method to create a new instance.
 		 *
 		 * @since 1.0
 		 */
 		public static function register() {
 			if ( ! isset( self::$instance ) && ! ( self::$instance instanceof Om_Assistant ) ) {
 				self::$instance = new Om_Assistant();
-				self::$instance->init();
 				self::$instance->define_constants();
 				self::$instance->includes();
 			}
 		}
 
 		/**
-		 *
-		 * @since 1.0
-		 */
-		public function init() {
-			add_action( 'enqueue_assets', 'plugin_assets' );
-		}
-
-		/**
+		 * Defines plugin constants.
 		 *
 		 * @since 1.0
 		 */
